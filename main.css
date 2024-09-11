@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  --Very-Dark-Gray: hsl(0, 0%, 17%);
+  --Dark-Gray: hsl(0, 0%, 59%);
+  font-family: Rubik, sans-serif;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.header {
+  background: url("img/pattern-bg.png") center center no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  position: relative;
+}
+
+.header .title {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 12rem;
+}
+
+.search input {
+  padding: 1rem;
+  border-top-left-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: white;
+  color: var(--Very-Dark-Gray);
+  font-size: 18px;
+}
+
+::placeholder {
+  color: var(--Very-Dark-Gray);
+  font-size: 18px;
+}
+
+.search img {
+  background: black;
+  padding: 1.2rem;
+  border-top-right-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  cursor: pointer;
+}
+
+.address {
+  text-align: center;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  position: absolute;
+  z-index: 2;
+  box-shadow: var(--Dark-Gray) 0.1rem 0.5rem 1.5rem 0.01rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: inherit;
+  max-width: inherit;
+  top: 13rem;
+}
+
+.address ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.address ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.address ul li span:first-child {
+  color: var(--Dark-Gray);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.address ul li span:last-child {
+  color: var(--Very-Dark-Gray);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.map {
+  background: url(img/map.jpg) center center no-repeat;
+  padding: 1rem;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+br {
+  display: none;
+}
+
+.map img {
+  margin-top: -10rem;
+}
+
+@media screen and (min-width: 1000px) {
+  .search {
+    max-width: 500px;
+    margin: 0 auto 5rem auto;
+  }
+
+  .address ul {
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 4rem;
+    text-align: left;
+  }
+
+  .address ul li span:first-child {
+    font-size: 20px;
+    display: block;
+  }
+
+  .address ul li span:last-child {
+    font-size: 28px;
+    display: block;
+  }
+
+  br {
+    display: block;
+  }
+
+  .map img {
+    margin-top: -10rem;
+  }
+}
